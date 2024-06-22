@@ -174,12 +174,12 @@ height="1.4652777777777777in"}
 
 Figure 1: Example of Undirected Graph Representation
 
-> 1 0 0 1
+| 0   | 2   | 0.5 | 1   |
+| --- | --- | --- | --- |
+| 2   | 0   | 1   | 4   |
+| 0   | 0.5 | 1   | 0   |
+| 0   | 4   | 0   | 0   |
 
-0 0 0 1
-
-> 1 1 1 0\
-> 0 1 0 1
 >
 > It can be observed that the property of symmetry in graph is extended
 > to it's matrix form.

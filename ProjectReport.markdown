@@ -169,18 +169,17 @@ relationships between vertices. This means that if there is an edge
 between vertex A and vertex B, there is also an edge between vertex B
 and vertex A.
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image1.png){width="2.4097222222222223in"
-height="1.4652777777777777in"}
+![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image1.png)
 
-Figure 1: Example of Undirected Graph Representation
 
-| 0   | 2   | 0.5 | 1   |
+![Alt text](images/image1.png)
+| 1   | 0   | 0 | 1   |
 | --- | --- | --- | --- |
-| 2   | 0   | 1   | 4   |
-| 0   | 0.5 | 1   | 0   |
-| 0   | 4   | 0   | 0   |
+| 0  | 0   | 0   | 1   |
+| 1   | 1 | 1   | 0   |
+| 0   | 1   | 0   | 1   |
 
->
+>Figure 1: Example of Undirected Graph Representation
 > It can be observed that the property of symmetry in graph is extended
 > to it's matrix form.
 
@@ -192,20 +191,15 @@ existence of an edge from vertex B to vertex A. The edges in a directed
 graph have a distinct source (starting vertex) and target (ending
 vertex). A similar
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image2.png){width="2.4097222222222223in"
-height="1.4916655730533683in"}
 
-Figure 2: Example of Directed Graph Representation
-
-> 1 0 0 0
-
-0 0 0 0
-
-> 0 1 1 0\
-> 0 0 0 1
-
-observation can be made about asymmetry being extended to graph's matrix
-form.
+![Alt text](images/image2.png)
+| 0   | 0   | 0 | 1   |
+| --- | --- | --- | --- |
+| 1  | 0   | 0   | 0   |
+| 0   | 0 | 0   | 0   |
+| 0   | 1   | 1   | 0   |
+>Figure 2: Example of Directed Graph Representation
+>Observation can be made about asymmetry being extended to graph's matrix form.
 
 **6.2 Weighted and Unweighted Graphs**
 
@@ -227,46 +221,28 @@ It represents a connection or relationship within a single vertex. It's
 matrix form is characterised by *Aij* not zero. Proteins and Hyperlinks
 are represented by these graphs.
 
-3
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image3.png){width="2.4097222222222223in"
-height="2.2430555555555554in"}
 
-Figure 3: Example of Unweighted Graph Representation
+![Alt text](images/image3.png)
+| 0   | 1   | 1 | 0   |
+| --- | --- | --- | --- |
+| 1  | 0   | 1   | 1   |
+| 1   | 1 | 0   | 0   |
+| 0   | 1   | 0   | 0   |
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image4.png){width="2.4097222222222223in"
-height="2.334722222222222in"}
+>Figure 3: Example of Unweighted Graph Representation
 
-Figure 4: Example of weighted Graph Representation
+![Alt text](images/image4.png)
+| 0   | 2   | 0.5 | 1   |
+| --- | --- | --- | --- |
+| 2   | 0   | 1   | 4   |
+| 0   | 0.5 | 1   | 0   |
+| 0   | 4   | 0   | 0   |
+
+>Figure 4: Example of weighted Graph Representation
 
 **6.4 Multigraphs**
 
-1 0 1 1
-
-1 1 0 0
-
-> 0 1 0 0\
-> 0 1 1 0
->
-> 0*.*5 1
-
-2
-
-> 0\
-> 0
->
-> 4\
-> 1
-
-0
-
-> 0\
-> 4
-
-0
-
-> 0\
-> 0 2 0*.*5 1
 
 A multigraph is a type of graph that allows multiple edges between pairs
 of vertices. Unlike simple graphs, where only one edge can exist between
@@ -302,62 +278,54 @@ connected. But it is worth noting that not every node is part of a
 nontrivial strongly connected component. Through these components we can
 defines In-component and Ou-component nodes. In
 
-4
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image5.png){width="2.4097222222222223in"
-height="2.2388877952755903in"}
 
-Figure 5: Example of Self Looped Graph Representation
+!![Alt text](images/image5.png)
+| 1   | 1   | 1 | 0   |
+| --- | --- | --- | --- |
+| 1   | 0   | 1   | 1   |
+| 1   | 1 | 0   | 0   |
+| 0   | 1   | 0   | 1   |
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image6.png){width="2.4097222222222223in"
-height="2.258332239720035in"}
+>Figure 5: Example of Self Looped Graph Representation
 
-Figure 6: Example of Multigraph Representation
+!![Alt text](images/image6.png)
+| 0   | 2   | 1 | 0   |
+| --- | --- | --- | --- |
+| 2   | 0   | 1   | 3   |
+| 1   | 1 | 0   | 0   |
+| 0   | 3   | 0   | 0   |
 
-> 1 0 1 1
+>Figure 6: Example of Multigraph Representation
 
-1 1 0 0
-
-> 0 1 0 1\
-> 1 1 1 0
->
-> 2 0 1 3
-
-1 1 0 0
-
-> 0 3 0 0\
-> 0 2 1 0
 
 component nodes are those which can reach the SCC whereas Out-component
 nodes are those which can be reached from the SCC. In Example below E
 and G is In-component while D and F are out component.
 
-5
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image7.png){width="6.6930555555555555in"
-height="3.1930555555555555in"}
 
-Figure 7: Connectivity of Undirected Graphs
+!![Alt text](images/image7.png)
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image8.png){width="6.6930555555555555in"
-height="2.595832239720035in"}
+>Figure 7: Connectivity of Undirected Graphs
 
-Figure 8: Strongly Connected Components in an Directed Graph
+!![Alt text](images/image8.png)
+
+>Figure 8: Strongly Connected Components in an Directed Graph
 
 6
 
-> **8** **Implemenation**
->
-> In this section, we discuss our assignment which focuses on graph
-> creation using PyG.
->
-> **8.1 Section-1: Graph Creation**
->
-> **8.1.1** **Creating the following graph in PyG. The numbers inside
-> the squares are both the ID** **and the values stored in the notes.**
+ **8** **Implemenation**
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image9.png){width="3.345833333333333in"
-height="1.8319444444444444in"}
+ In this section, we discuss our assignment which focuses on graph
+ creation using PyG.
+
+ **8.1 Section-1: Graph Creation**
+
+ **8.1.1** **Creating the following graph in PyG. The numbers inside
+ the squares are both the ID** **and the values stored in the notes.**
+
+!![Alt text](images/image6.png)
 
 Figure 9: Graph
 
@@ -429,8 +397,7 @@ Figure 9: Graph
 > using the to networkx function. The resulting Graph object is then
 > passed to the visualize graph function for visualization.
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image10.png){width="3.345833333333333in"
-height="3.327777777777778in"}
+!![Alt text](images/image10.png)
 
 Figure 10: Output Graph
 
@@ -476,8 +443,7 @@ Figure 10: Output Graph
 
 8
 
-![](vertopal_ef013bcb0df14dbb939bdd28bd326420/media/image11.png){width="3.345833333333333in"
-height="3.327777777777778in"}
+!![Alt text](images/image11.png)
 
 Figure 11: Output Graph
 
